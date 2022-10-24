@@ -5,6 +5,23 @@
   box-sizing: border-box;
 }
 
+:root
+{
+  --color-background-alt: #fff;
+  --color-background: #eee;
+  --color-foreground: #333;
+}
+
+@media ( prefers-color-scheme: dark )
+{
+  :root
+  {
+    --color-background-alt: #000;
+    --color-background: #333;
+    --color-foreground: #eee;
+  }
+}
+
 html,
 body
 {
@@ -12,20 +29,25 @@ body
   padding: 0;
   font-family: sans-serif;
   font-size: 16px;
-  background-color: #eee;
-  color: #333;
+  background-color: var( --color-background );
+  color: var( --color-foreground );
+}
+
+body
+{
+  padding: 0.5rem 1rem;
 }
 
 a
 {
-  color: #333;
+  color: var( --color-foreground );
 }
 
 h1, h2, p, div.result
 {
   margin: 0 auto;
-  padding: 0.5rem 1rem;
   max-width: 600px;
+  padding: 0.5rem;
 }
 
 h1 a
@@ -37,8 +59,8 @@ textarea
 {
   width: 100%;
   height: 200px;
-  background-color: white;
-  color: #333;
+  background-color: var( --color-background-alt );
+  color: var( --color-foreground );
   border-radius: 0;
   padding: 0.5rem 1rem;
   font-size: 1rem;
@@ -46,27 +68,27 @@ textarea
 
 textarea:focus
 {
-  outline: 3px solid #333;
+  outline: 3px solid var( --color-foreground );
 }
 
 input[type="checkbox"]
 {
-  background-color: white;
+  background-color: var( --color-background-alt );
   border-radius: 0;
-  border: 1px solid #333;
+  border: 1px solid var( --color-foreground );
 }
 
 button
 {
   padding: 0.5rem 1rem;
-  background-color: white;
-  color: #333;
+  background-color: var( --color-background-alt );
+  color: var( --color-foreground );
   font-weight: bold;
   border-radius: 20px;
 }
 
 .result
 {
-  background-color: white;
+  background-color: var( --color-background-alt );
   overflow-x: auto;
 }
