@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <title>{% if title %}{{ title }} - {% endif %}Tools</title>
+    
+    <link rel="stylesheet" type="text/css" href="/assets/css/tools.css">
+  </head>
+  
+  <body>
+    <h1><a href="/">Tools</a></h1>
+    <p><i>Some web based tools to help with some tedious tasks that I can't be bothered doing manually. Yeah, I'm lazy. Shoot me. ;)</i></p>
+    
+    <hr>
+    
+    {% if title %}<h2>{{ title }}</h2>{% endif %}
+    
+    {{ content | safe }}
+    
+    <hr>
+    
+    <p>Made by <a href="https://davidhunter.scot" target="_blank">David Hunter</a>.</p>
+    
+    <script type="text/javascript" src="/assets/javascript/tools.js"></script>
+  </body>
+</html>
