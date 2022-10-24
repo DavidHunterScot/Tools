@@ -3,10 +3,10 @@ var excludeTrailingBracketFindUrlsInString = document.getElementById( 'excludeTr
 var btnFindUrlsInString = document.getElementById( 'btnFindUrlsInString' );
 var resultFindUrlsInString = document.getElementById( 'resultFindUrlsInString' );
 
-/*btnFindUrlsInString.addEventListener( 'click', function()
-{
-  resultFindUrlsInString.innerHTML = 'Result...<br>' + extractUrls( txtFindUrlsInString.value );
-});*/
+txtFindUrlsInString.disabled = false;
+excludeTrailingBracketFindUrlsInString.disabled = false;
+btnFindUrlsInString.disabled = false;
+resultFindUrlsInString.innerHTML = '';
 
 btnFindUrlsInString.addEventListener( 'click', function()
 {
