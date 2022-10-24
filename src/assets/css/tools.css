@@ -33,8 +33,9 @@ body
   color: var( --color-foreground );
 }
 
-body
+.container
 {
+  margin: 0 auto;
   padding: 0.5rem 1rem;
 }
 
@@ -43,11 +44,26 @@ a
   color: var( --color-foreground );
 }
 
+header
+{
+  background-color: var( --color-background-alt );
+  border-bottom: 1px solid var( --color-foreground );
+}
+
+header h1
+{
+  font-size: 1.3rem;
+}
+
+footer
+{
+  font-size: 0.7rem;
+}
+
 h1, h2, p, div.result
 {
-  margin: 0 auto;
-  max-width: 600px;
   padding: 0.5rem;
+  margin: 0;
 }
 
 h1 a

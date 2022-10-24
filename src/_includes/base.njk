@@ -10,18 +10,25 @@
   </head>
   
   <body>
-    <h1><a href="/">Tools</a></h1>
-    <p><i>Some web based tools to help with some tedious tasks that I can't be bothered doing manually. Yeah, I'm lazy. Shoot me. ;)</i></p>
+    <header>
+      <div class="container">
+        <h1><a href="/">Tools</a></h1>
+      </div>
+    </header>
     
-    <hr>
+    <main>
+      <div class="container">
+        {% if title %}<h2>{{ title }}</h2>{% endif %}
+        
+        {{ content | safe }}
+      </div>
+    </main>
     
-    {% if title %}<h2>{{ title }}</h2>{% endif %}
-    
-    {{ content | safe }}
-    
-    <hr>
-    
-    <p>Made by <a href="https://davidhunter.scot" target="_blank">David Hunter</a>.</p>
+    <footer>
+      <div class="container">
+        <p>Made by <a href="https://davidhunter.scot" target="_blank">David Hunter</a>.</p>
+      </div>
+    </footer>
     
     {% if scripts %}
       {% for script in scripts %}
