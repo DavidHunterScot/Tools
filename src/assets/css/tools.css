@@ -21,21 +21,22 @@ a
   color: #333;
 }
 
-h1, h2, p
+h1, h2, p, div.result
 {
-  margin: 0;
+  margin: 0 auto;
   padding: 0.5rem 1rem;
+  max-width: 600px;
 }
 
 textarea
 {
   width: 100%;
-  max-width: 600px;
   height: 200px;
   background-color: white;
   color: #333;
   border-radius: 0;
   padding: 0.5rem 1rem;
+  font-size: 1rem;
 }
 
 textarea:focus
@@ -62,7 +63,5 @@ button
 .result
 {
   background-color: white;
-  padding: 0.5rem 1rem;
-  margin: 0.5rem 1rem;
   overflow-x: auto;
 }
