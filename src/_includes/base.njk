@@ -23,6 +23,10 @@
     
     <p>Made by <a href="https://davidhunter.scot" target="_blank">David Hunter</a>.</p>
     
-    <script type="text/javascript" src="/assets/javascript/tools.js"></script>
+    {% if scripts %}
+      {% for script in scripts %}
+        <script type="text/javascript" src="{{ script }}"></script>
+      {% endfor %}
+    {% endif %}
   </body>
 </html>
