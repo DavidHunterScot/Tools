@@ -14,13 +14,11 @@ btnFindUrlsInString.addEventListener( 'click', function()
   
   if( urls.length > 0 )
   {
+    resultFindUrlsInString.innerHTML = "";
+    
     for( var u = 0; u < urls.length; u++ )
     {
       resultFindUrlsInString.innerHTML += '<a href="' + urls[ u ] + '" target="_blank">' + urls[ u ] + '</a><br>';
-      
-      /*if( u < urls.length - 1 )
-        resultFindUrlsInString.innerHTML += '<br>';
-      }*/
     }
   }
   else
